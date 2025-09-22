@@ -1,0 +1,17 @@
+# Book Lovers — Multipage Site
+
+Multipage website (Home, African Literature, Thrillers, Contact).
+Built with HTML5, CSS, and a JS file for interactivity.
+
+## Structure
+- index.html — Home
+- african.html — African Literature
+- thrillers.html — Thriller authors
+- contact.html — Contact form with validation
+- css/styles.css — Styling and responsive rules
+- js/script.js — Nav toggle + form validation + utilities
+
+## How to preview locally
+1. Open `index.html` in a browser (or open the folder in VS Code and use Live Server).
+2. Navigate pages through the top menu.
+

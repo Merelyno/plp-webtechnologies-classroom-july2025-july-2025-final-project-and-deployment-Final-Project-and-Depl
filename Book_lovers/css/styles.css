@@ -1,0 +1,47 @@
+/* Layout */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #2c6fb2;
+  --muted: #666;
+  --bg: #f6f6f6;
+  --card: #fff;
+}
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; line-height:1.45; background:var(--bg); color:#222; }
+.container { max-width:900px; margin:0 auto; padding:20px; }
+
+/* Header */
+.site-header { background:var(--card); border-bottom:1px solid #e4e4e4; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:12px 20px; }
+.logo { font-weight:700; color:var(--accent); text-decoration:none; font-size:1.1rem; }
+.main-nav ul { list-style:none; display:flex; gap:12px; }
+.main-nav a { color:var(--muted); text-decoration:none; padding:6px 8px; }
+.main-nav a[aria-current="page"] { font-weight:600; color:var(--accent); }
+
+/* Nav toggle (mobile) */
+.nav-toggle { display:none; background:transparent; border:0; font-size:1.2rem; cursor:pointer; }
+.visually-hidden{ position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+
+/* Hero & cards */
+.hero { background:var(--card); padding:20px; margin:20px 0; border-radius:6px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+.hero h1 { color:var(--accent); font-size:1.8rem; margin-bottom:0.5rem; }
+.btn { background:var(--accent); color:#fff; padding:8px 12px; border-radius:4px; text-decoration:none; display:inline-block; margin-right:8px; }
+.btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+
+/* grid / list styles */
+.card, .card-grid { background:var(--card); padding:16px; margin-bottom:16px; border-radius:6px; }
+.genre-list { display:flex; gap:10px; flex-wrap:wrap; list-style:none; margin-top:12px; }
+.genre-list li { padding:6px 8px; background:#f0f8ff; border-radius:4px; color:var(--muted); }
+
+/* footer */
+.site-footer { margin-top:24px; padding:12px 0; text-align:center; color:var(--muted); }
+
+/* form styles */
+input, textarea { width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; margin-bottom:10px; }
+button[type="submit"], form button { background:var(--accent); color:#fff; border:0; padding:10px 14px; border-radius:4px; cursor:pointer; }
+
+/* responsive */
+@media (max-width:700px){
+  .main-nav ul{ display:none; position:absolute; right:10px; top:60px; background:var(--card); padding:10px; flex-direction:column; border:1px solid #eee; border-radius:6px; }
+  .nav-toggle{ display:inline-block; }
+  .header-inner{ position:relative; }
+}
